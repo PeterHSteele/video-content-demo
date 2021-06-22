@@ -23,14 +23,14 @@ function VCD_Type_Text(panel){
       if( 'conclusion'==panel.id) return;
       const isEmbedPanel = 'embed'==panel.id;
       let downBtnDelay=600;
-      
+
       if (isEmbedPanel){
         downBtnDelay=1200
       }
 
       _.timeoutId=window.setTimeout(()=>_.goDown.classList.add('show'),downBtnDelay);
       if (isEmbedPanel){
-        window.setTimeout(()=>panel.querySelector('#compact').classList.add('show'),600);
+        window.setTimeout(()=>panel.querySelector('#compact').classList.add('show'),400);
       }
     }
     next.classList.remove('hidden');

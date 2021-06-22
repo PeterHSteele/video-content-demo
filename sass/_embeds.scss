@@ -20,7 +20,7 @@
     background: $blue;
 
     &.active{
-      animation: 6s slide linear; 
+      animation: 3s slide linear; 
     }
   }
 
@@ -29,12 +29,8 @@
       width: 0%;
     }
 
-    50%{
-      width: 50%;
-    }
-
     100%{
-      width: 0;
+      width: 50%;
     }
   }
 
