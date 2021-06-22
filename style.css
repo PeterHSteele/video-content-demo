@@ -1,0 +1,326 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font: 16px "Raleway", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  word-wrap: normal !important;
+}
+
+h2 {
+  font-size: 5em;
+}
+
+.round-button {
+  background: #262626;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 5rem;
+  line-height: 5rem;
+  width: 5rem;
+  font-size: 5em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s;
+  border: none;
+}
+.round-button.show {
+  opacity: 1;
+}
+.round-button:hover {
+  background: #0e4eed;
+}
+
+.typed-heading .character {
+  padding: 16px 0;
+  border-right: 1px solid transparent;
+}
+.typed-heading .character.hidden {
+  display: none;
+}
+.typed-heading.dark-text .character.active {
+  border-right: 1px solid #000;
+}
+.typed-heading.light-text .character.active {
+  border-right: 1px solid #fff;
+}
+
+#intro {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  height: 100vh;
+  color: #262626;
+  position: relative;
+  padding: 0 100px;
+}
+@keyframes slide {
+  to {
+    transform: translate(100%, 0);
+  }
+}
+#intro h1 {
+  font-size: 4.5em;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+#intro h1:before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: calc(50% - 30px);
+  height: 8px;
+  width: 60px;
+  background: #0e4eed;
+}
+
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 0 100px;
+  box-sizing: border-box;
+  font-weight: 100;
+  padding-top: 4px;
+}
+header.site-header nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header.site-header nav ul li {
+  padding: 0 0.5em;
+}
+header.site-header nav ul li a {
+  padding: 0.5em 0;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+header.site-header nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+header.site-header .header-icons {
+  display: flex;
+}
+header.site-header .header-icons form {
+  margin-right: 18px;
+  border-radius: 9px;
+  height: 36px;
+  padding-left: 8px;
+  display: flex;
+}
+header.site-header .header-icons form input {
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-radius: 18px 0 0 18px;
+  padding-left: 12px;
+  font-weight: 300;
+}
+header.site-header .header-icons form input::placeholder {
+  color: #aaa;
+  font-weight: 100;
+}
+header.site-header .header-icons form button {
+  /*border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;*/
+  border: 1px solid #fff;
+  border-radius: 0 18px 18px 0;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px 0 9px;
+  font-size: 18px;
+}
+header.site-header .header-icons button {
+  display: block;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  height: 36px;
+  padding: 9px 12px;
+  color: #fff;
+}
+
+#background {
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+#background video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+#background .mask {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+#background .mask h2 {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+#embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+#embed .content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0 100px;
+}
+#embed .compactor {
+  align-self: stretch;
+  background: #0e4eed;
+}
+#embed .compactor.active {
+  animation: 3s slide linear;
+}
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+#embed .video {
+  flex: 5;
+  min-width: 500px;
+  max-width: 75%;
+}
+#embed .video .video-wrapper {
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+}
+#embed .video .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#embed .text {
+  text-align: center;
+  padding: 2em;
+  flex: 4;
+}
+#embed .text h2 {
+  margin-top: 0;
+  font-size: 4em;
+}
+#embed .text p {
+  text-align: left;
+  font-size: 1.4em;
+}
+#embed .text #compact {
+  font-size: 4em;
+  margin-right: 1rem;
+}
+#embed .link {
+  flex: 0 0 100%;
+  text-align: center;
+  padding-top: 3em;
+}
+
+#feature {
+  padding: 2.5em 1em 1em;
+  position: relative;
+}
+#feature .bluebar {
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  top: 0;
+  left: 0;
+  background: #0e4eed;
+}
+#feature video {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  border: 10px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+#feature .text {
+  text-align: center;
+}
+#feature .text h2 {
+  margin: 1rem;
+}
+
+#conclusion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#conclusion h2 {
+  text-align: center;
+  font-size: 4.5em;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+#conclusion h2:before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: calc(50% - 30px);
+  height: 8px;
+  width: 60px;
+  background: #0e4eed;
+}
+
+/*# sourceMappingURL=style.css.map */
