@@ -1,0 +1,8 @@
+mixin typed(text)
+  -let chars = text.split('');
+  each char in chars
+    span.character.hidden=char
+
+mixin go-down(href)
+  a.go-down.round-button(href=href)
+    i.fa.fa-caret-down

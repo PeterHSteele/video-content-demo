@@ -1,0 +1,70 @@
+doctype html
+html(lang="en-us")
+  include mixins.pug
+  head
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../fontawesome/css/all.css")
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap",rel="stylesheet")
+    title Add Video to Your Site
+  body
+    #intro.panel
+      h1.typed-heading.dark-text(data-interval=40)
+        +typed("Let's Add Great-Looking Video Content to Your Website!")
+      +go-down("#background")
+    #background.panel
+      video(autoplay=true,loop=true,muted=true,src="../media/cats.mp4")
+      .mask
+        header.site-header
+          nav
+            ul
+              li
+                a(href="#") Home
+              li
+                a(href="#") About
+              li
+                a(href="#") Store
+              li
+                a(href="#") Contact
+          .header-icons
+            form(action="/") 
+              label(for="header-search") 
+                span.screen-reader-text Search Term
+              input#header-search(type="search",placeholder="Search")
+              button(type="submit", role="submit")
+                i.fas.fa-search
+                span.screen-reader-text Search
+            button
+              i.fas.fa-user
+            button
+              i.fas.fa-heart
+            button
+              i.fas.fa-shopping-cart
+        h2#background-heading.typed-heading.light-text(data-interval=70)
+          +typed('Tasteful Background Videos')
+        +go-down("#embed")
+    #embed.panel
+      .content
+        .video
+          .video-wrapper
+            iframe(width="560",height="315",src="https://www.youtube.com/embed/nFODjZuGa98/?autoplay=1&mute=1",title="YouTube video player",frameborder="0",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowfullscreen=true,)
+          //iframe(width="100%",height="auto ",src="https://www.youtube.com/embed/nFODjZuGa98",title="YouTube video player",frameborder="0",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowfullscreen=true)
+        .text
+          h2.typed-heading.dark-text(data-interval=90)
+            +typed('Responsive Embeds')
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          a#compact.round-button(role="button")
+            i.fas.fa-arrow-left
+          +go-down('#feature')
+      .compactor
+    #feature.panel
+      .bluebar
+      video(src="../media/waves.mp4",controls=true)
+      .text
+        h2.typed-heading.dark-text(data-interval=60)
+          +typed('Beautiful Featured Videos')
+        +go-down("#conclusion")
+    #conclusion.panel
+      h2.typed-heading.dark-text(data-interval=50) 
+        +typed('Looking Forward to Working With You!')
+    script(src="../js/main.js")

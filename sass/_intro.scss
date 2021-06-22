@@ -1,0 +1,22 @@
+#intro{
+  display: flex;
+  //flex-flow: row wrap;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  height: 100vh;
+  color: #262626;
+  position: relative;
+  padding: 0 100px;
+
+  @keyframes slide{
+    to{
+      transform: translate(100%, 0);
+    }
+  }
+
+  h1{
+    @include cta-heading();
+  }
+}

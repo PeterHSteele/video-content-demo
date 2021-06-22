@@ -1,0 +1,26 @@
+$blue: rgb(14,78,237);
+
+@mixin cta-heading(){
+  font-size: 4.5em;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+
+  &:before{
+    position: absolute;
+    content: "";
+    top: -20px;
+    left: calc(50% - 30px);
+    height: 8px;
+    width: 60px;
+    background: $blue; 
+  }
+}
+
+@import 'base';
+@import 'intro.scss';
+@import 'header.scss';
+@import 'background.scss';
+@import 'embeds.scss';
+@import 'feature.scss';
+@import 'conclusion';
