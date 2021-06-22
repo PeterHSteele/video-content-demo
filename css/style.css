@@ -224,7 +224,7 @@ header.site-header .header-icons button {
   background: #0e4eed;
 }
 #embed .compactor.active {
-  animation: 3s slide linear;
+  animation: 2s slide linear forwards;
 }
 @keyframes slide {
   0% {

@@ -20,7 +20,7 @@
     background: $blue;
 
     &.active{
-      animation: 3s slide linear; 
+      animation: 2s slide linear forwards; 
     }
   }
 
